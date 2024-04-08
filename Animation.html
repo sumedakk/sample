@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+body{
+    border: 2px solid black;
+    height: 100vh;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    border: 2px solid black;
+    height: 400px;
+    width: 400px;
+    border-radius: 30px;
+    background-color: goldenrod;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    /* animation-name: darshan;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+}
+
+/* @keyframes darshan{
+    100%{transform: rotate(360deg);}
+} */
+div::before{
+    content: "";
+    /* border: 2px solid #ff0000; */
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    background-image: conic-gradient(red, goldenrod, blue, white,transparent 120deg);
+    animation: darshan 2s linear infinite;
+    transition: cubic-bezier(0.4 0.24 1.6 0);
+}
+
+
+div::after{
+    content: "";
+    border-radius: 10px;
+    height: 380px;
+    width: 380px;
+    position: relative;
+    background-color: violet;
+    /* transition: cubic-bezier(0.4 0.24 1.6 0); */
+}
+
+@keyframes darshan{
+    100%{transform: rotate(-360deg);}
+}
+
+
+
+</style>
+
+
+<body>
+    <div></div>
+</body>
+</html>
